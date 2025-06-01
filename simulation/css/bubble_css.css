@@ -1,0 +1,51 @@
+#wrapper {
+    padding-top: 2%;
+}
+
+#cards {
+    position: relative; 
+    text-align: center;
+}
+
+.card {
+    display: inline-block; 
+    font-size: 1.5vw;
+    padding: 1.7%;
+    margin: 0.05%;  
+    color: white; 
+    background-color: #288ec8; 
+}
+
+#legend-comment-wrapper {
+    padding-top: 2%;
+    height: 27vh;
+}
+
+.comment-box {
+    margin: auto;
+}
+
+.slidecontainer {
+    padding-top: 0%;
+}
+
+.buttons-wrapper {
+    text-align: center;
+    padding-top: 2%;
+}
+
+#question {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding-bottom: 2%;
+}
+
+#typeSelect {
+    padding-top: 2%;
+    transition: padding-top 0.2s ease-out;
+}
+
+p,span {
+    font-size: 1.5vw;
+    text-align: center;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bubble Sort Demo</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/bubble_css.css">
+   <style>
+      .instruction-box {
+         background-color: #f8f9fa;
+         border: 1px solid #ddd;
+         padding: 15px;
+         margin-bottom: 20px;
+         border-radius: 5px;
+      }
+      .collapsible {
+         background-color: #288ec8;
+         color: white;
+         cursor: pointer;
+         padding: 10px;
+         width: 100%;
+         border: none;
+         text-align: left;
+         outline: none;
+         font-size: 15px;
+         border-radius: 3px;
+      }
+      .content {
+         padding: 0 18px;
+         display: none;
+         overflow: hidden;
+         background-color: white;
+      }
+      .button-input {
+         background-color: #288ec8;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         margin: 5px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 14px;
+      }
+      .button-input:hover {
+         background-color: #1f6ea8;
+      }
+      .slider {
+         width: 100%;
+         height: 25px;
+         border-radius: 5px;
+         background: #d3d3d3;
+         outline: none;
+      }
+      .back-button {
+         background-color: #6c757d;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         margin: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 14px;
+         position: absolute;
+         top: 20px;
+         left: 20px;
+      }
+      .back-button:hover {
+         background-color: #5a6268;
+      }
+   </style>
+</head>
+<body>
+   <button class="back-button" onclick="window.location.href='index.html'">← Back to Menu</button>
+   <div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class="content">
+         <ul>
+            <li>Click on the <b>Start</b> button to start the demo.</li>
+            <li>Move the slider to adjust the speed of the demo.</li>
+            <li>Click on the <b>Pause</b> button if you want to stop and manually click the Next button to have a step by step realization of the process.</li>
+            <li>Click on the <b>Reset</b> button to start all over with a new set of random numbers!</li>
+         </ul>
+      </div> 
+   </div>
+    
+   <div id="wrapper">
+      <div id="cards"></div>
+      
+      <div id="legend-comment-wrapper">
+         <div class="comment-box" id="comment-box-bigger">
+           <b>Observations</b>
+           <p id="ins"></p>
+         </div>
+         
+      </div>
+      <div class="slidecontainer">
+        <p>
+          Min. Speed
+          <input class="slider" type="range" min="100" max="2500" id="interval" value="1500">
+          Max. Speed
+        </p>
+      </div>
+      
+      <div class="buttons-wrapper">
+        <input class="button-input" type="button" value="Start" id="next">
+        <input class="button-input" type="button" value="Reset" id="reset">
+        <input class="button-input" type="button" value="Pause" id="pause"> 
+      </div> 
+      
+    </div>
+   <script src="js/scorm-api.js"></script>
+   <script src="js/bubble_demo.js"></script>
+   <script>
+      document.querySelector('.collapsible').addEventListener('click', function() {
+         this.classList.toggle('active');
+         var content = this.nextElementSibling;
+         if (content.style.display === 'block') {
+            content.style.display = 'none';
+         } else {
+            content.style.display = 'block';
+         }
+      });
+   </script>
+</body>
+</html>

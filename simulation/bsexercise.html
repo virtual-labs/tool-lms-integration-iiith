@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+    <title>Bubble Sort Exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bubble_css.css">
+    <link rel="stylesheet" href="../../assets/css/common-styles.css">
+    <style>
+      .instruction-box {
+         background-color: #f8f9fa;
+         border: 1px solid #ddd;
+         padding: 15px;
+         margin-bottom: 20px;
+         border-radius: 5px;
+      }
+      .collapsible {
+         background-color: #288ec8;
+         color: white;
+         cursor: pointer;
+         padding: 10px;
+         width: 100%;
+         border: none;
+         text-align: left;
+         outline: none;
+         font-size: 15px;
+         border-radius: 3px;
+      }
+      .content {
+         padding: 0 18px;
+         display: none;
+         overflow: hidden;
+         background-color: white;
+      }
+      .button-input {
+         background-color: #288ec8;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         margin: 5px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 14px;
+      }
+      .button-input:hover {
+         background-color: #1f6ea8;
+      }
+      #comment-box-smaller {
+         visibility: hidden;
+      }
+      #next, #swap, #undo {
+         visibility: hidden;
+      }
+      .back-button {
+         background-color: #6c757d;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         margin: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 14px;
+         position: absolute;
+         top: 20px;
+         left: 20px;
+      }
+      .back-button:hover {
+         background-color: #5a6268;
+      }
+      .scoring-info {
+         background-color: #e8f4fd;
+         padding: 10px;
+         margin: 10px 0;
+         border-radius: 5px;
+         font-size: 14px;
+      }
+    </style>
+</head>
+<body>
+   <button class="back-button" onclick="window.location.href='index.html'">← Back to Menu</button>
+		 <div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class="content">
+        <ul>
+          <li>Click on the <b>Start</b> button to start the exercise.</li>
+          <li>Click on the <b>Swap</b> or <b>Next</b> to perform these operations.</li> 
+          <li>Click on <b>Submit</b> to check your result!</li>
+          <li>Click on <b>Reset</b> to start over with a new set of numbers</li>
+        </ul>
+        <div class="scoring-info">
+          <strong>Scoring:</strong>
+          <ul>
+            <li>Correct solution: 60-100% (based on efficiency)</li>
+            <li>Partial credit: 10-40% (based on progress)</li>
+            <li>Fewer comparisons and swaps = higher score</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     
+    <div id="wrapper">
+      <div id="question">
+        <b>Question: </b>Sort the given array using Bubble Sort.
+      </div>
+      
+      <div id="cards"></div>
+      
+      <div id="legend-comment-wrapper">
+        <div class = "comment-box" id="comment-box-smaller">
+          <b>Observations</b>
+          <p id="ins"> </p>
+        </div>
+        
+      </div>
+      <div class="buttons-wrapper"> 
+        <input class="button-input" type="button" value="Start" id="start">
+        <input class="button-input" type="button" value="Next" id="next">
+        <input class="button-input" type="button" value="Swap" id="swap">
+        <input class="button-input" type="button" value="Undo" id="undo">
+        <input class="button-input" type="button" value="Reset" id="reset">
+      </div>
+      
+    </div>
+
+	<!-- Add JS at the bottom of HTML file --> 
+        <script src="js/scorm-api.js"></script>
+        <script src="js/bubble_exercise.js"></script>
+        <script src="../../assets/js/instruction-box.js"></script>
+        <script>
+      document.querySelector('.collapsible').addEventListener('click', function() {
+         this.classList.toggle('active');
+         var content = this.nextElementSibling;
+         if (content.style.display === 'block') {
+            content.style.display = 'none';
+         } else {
+            content.style.display = 'block';
+         }
+      });
+   </script>
+</body>
+</html>

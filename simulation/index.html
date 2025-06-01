@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bubble Sort Learning Module</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/common-styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #288ec8;
+            margin-bottom: 30px;
+        }
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px auto;
+            padding: 0 20px;
+            max-width: 1000px;
+            justify-items: center;
+        }
+        .module-card {
+            background-color: #f8f9fa;
+            border: 2px solid #288ec8;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .module-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #288ec8;
+            margin-bottom: 10px;
+        }
+        .module-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .module-button {
+            background-color: #288ec8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .module-button:hover {
+            background-color: #1f6ea8;
+        }
+        .intro-section {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .intro-section h2 {
+            color: #288ec8;
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            .module-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 10px;
+            }
+            .module-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bubble Sort Learning Module</h1>
+        
+        <div class="intro-section">
+            <h2>Welcome to Bubble Sort Interactive Learning</h2>
+            <p>This interactive learning module will help you understand the Bubble Sort algorithm through three different approaches:</p>
+            <ul>
+                <li><strong>Demo:</strong> Watch how Bubble Sort works with automated visualization</li>
+                <li><strong>Practice:</strong> Interactive practice with guided feedback</li>
+                <li><strong>Exercise:</strong> Test your understanding with hands-on sorting</li>
+            </ul>
+            <p>Start with the Demo to understand the concept, then move to Practice for guided learning, and finally complete the Exercise to test your knowledge.</p>
+        </div>
+
+        <div class="module-grid">
+            <div class="module-card">
+                <div class="module-title">Demo</div>
+                <div class="module-description">
+                    Watch an automated demonstration of the Bubble Sort algorithm. 
+                    Control the speed and observe step-by-step how elements are compared and swapped.
+                </div>
+                <a href="bsdemo.html" class="module-button">Start Demo</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-title">Practice</div>
+                <div class="module-description">
+                    Interactive practice mode where you decide when to swap or move to the next comparison. 
+                    Get immediate feedback on your decisions.
+                </div>
+                <a href="bspractice.html" class="module-button">Start Practice</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-title">Exercise</div>
+                <div class="module-description">
+                    Test your understanding by manually sorting an array using Bubble Sort. 
+                    Complete the exercise and submit for evaluation.
+                </div>
+                <a href="bsexercise.html" class="module-button">Start Exercise</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scorm-api.js"></script>
+    <script>
+        // Track that the main module was accessed without affecting scores
+        window.addEventListener('load', function() {
+            setSCORMValue("cmi.core.lesson_location", "main_menu");
+            // Don't set any completion status here
+            commitSCORM();
+        });
+    </script>
+</body>
+</html>

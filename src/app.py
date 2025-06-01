@@ -16,6 +16,13 @@ app.config['PYLTI_CONFIG'] = {
     }
 }
 
+# Allow iframe embedding (needed for Moodle)
+@app.after_request
+def add_headers(response):
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    response.headers['Content-Security-Policy'] = "frame-ancestors *"
+    return response
+
 def error(exception):
     return f"Error: {exception}"
 
