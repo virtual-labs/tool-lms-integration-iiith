@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+   <title>Bubble Sort Demo</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/bubble_css.css">
+</head>
+<body>
+		<!-- Your code goes here-->
+<div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class="content">
+        <ul>
+          <li>Click on the <b>Start</b> button to start the
+          demo.
+          <li>Move the slider to adjust the speed of the
+          demo.
+          <li>Click on the <b>Pause</b> button if you want to stop
+          and manually click the Next button to have a step by
+          step realization of the process.
+          <li>Click on the <b>Reset</b> button to start all over
+          with a new set of random numbers!
+        </ul>
+      </div> 
+    </div>
+     
+    <div id="wrapper">
+      <div id="cards"></div>
+      
+      <div id="legend-comment-wrapper">
+         <div class="comment-box" id="comment-box-bigger">
+           <b>Observations</b>
+           <p id="ins"></p>
+         </div>
+         
+      </div>
+      <div class="slidecontainer">
+        <p>
+          Min. Speed
+          <input class="slider" type="range" min="100" max="2500" id="interval" value="1500">
+          Max. Speed
+        </p>
+      </div>
+      
+      <div class="buttons-wrapper">
+        <input class="button-input" type="button" value="Back" id="back" onclick="window.location.href='/experiments'">
+        <input class="button-input" type="button" value="Start" id="next">
+        <input class="button-input" type="button" value="Reset" id="reset">
+        <input class="button-input" type="button" value="Pause" id="pause"> 
+      </div> 
+      
+    </div>
+	<!-- Add JS at the bottom of HTML file --> 
+        <script src="js/bubble_demo.js"></script>
+</body>
+</html>

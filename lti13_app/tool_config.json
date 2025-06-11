@@ -1,0 +1,18 @@
+{
+    "http://localhost:8080": {
+      "client_id": "QcDeuvhuaZulqPq",
+      "auth_login_url": "http://localhost:8080/mod/lti/auth.php",
+      "auth_token_url": "http://localhost:8080/mod/lti/token.php",
+      "key_set_url": "http://localhost:8080/mod/lti/certs.php",
+      "private_key_file": "/Users/hellgamerhell/Downloads/internship/tool-lms-integration-iiith/lti13_app/keys/private.key",
+      "public_key_file": "/Users/hellgamerhell/Downloads/internship/tool-lms-integration-iiith/lti13_app/keys/public.key",
+      "deployment_ids": ["2"],
+      "claims": [
+        "https://purl.imsglobal.org/spec/lti-ags/claim/endpoint"
+      ],
+      "scopes": [
+        "https://purl.imsglobal.org/spec/lti-ags/scope/lineitem",
+        "https://purl.imsglobal.org/spec/lti-ags/scope/score"
+      ]
+    }
+  }

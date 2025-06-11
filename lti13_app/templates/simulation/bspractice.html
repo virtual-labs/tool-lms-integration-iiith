@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+    <title>Bubble Sort Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bubble_css.css">
+</head>
+<body>
+		<!-- Your code goes here-->
+<div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class="content">
+        <ul>
+          <li>Practice Bubble sort using this artefact.</li>
+          <li>Click on the <b>Swap</b> button to swap the highlighted elements.</li> 
+          <li>If a swap is not required, click on <b>Next</b> to move on to the next adjacent pair of elements.</li>
+          <li><b>Note</b>: The loop will always run <b>n</b> (i.e. size of the array) times </li>
+        </ul>
+      </div> 
+    </div>
+     
+    <div id="wrapper">
+      <div id="cards"></div>
+      
+      <div id="legend-comment-wrapper">
+        <div  class="comment-box" id="comment-box-smaller">
+          <b>Observations</b>
+          <p id="ins"> </p>
+        </div>
+        
+      </div>
+      <div class="buttons-wrapper">
+        <input class="button-input" type="button" value="Back" id="back" onclick="window.location.href='/experiments'">
+        <input class="button-input" type="button" value="Next" id="next">
+        <input class="button-input" type="button" value="Swap" id="swap" >
+        <input class="button-input" type="button" value="Reset" id="reset">
+      </div>
+      
+    </div>
+
+	<!-- Add JS at the bottom of HTML file --> 
+        <script src="js/bubble_practice.js"></script>
+</body>
+</html>

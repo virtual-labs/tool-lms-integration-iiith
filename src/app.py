@@ -29,7 +29,13 @@ def error(exception):
 @app.route("/launch", methods=["POST"])
 @lti(error=error, request='initial', app=app)
 def launch(lti):
-    return render_template("landing.html", user_id=lti.name, roles=lti.role)
+    print("=== LTI Launch Params ===")
+    for key, val in request.form.items():
+        print(f"{key}: {val}")
+    return render_template("landing.html", 
+                         user_id=lti.name, 
+                         user_email=getattr(lti, 'email', f"{lti.name}"),
+                         roles=lti.role)
 
 @app.route("/")
 def index():
